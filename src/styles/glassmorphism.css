@@ -1,0 +1,19 @@
+/* GLASSMORPHISM ANIMATIONS */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.6); }
+}
+
+.glass-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* PARTICLE ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.particle {
+  animation: float 6s ease-in-out infinite;
+}
