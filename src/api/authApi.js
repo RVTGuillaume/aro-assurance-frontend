@@ -4,7 +4,7 @@
  * ARO Assurance Madagascar
  */
 
-import axios from './nothing';
+import axios from '../config/axios';
 
 export const authApi = {
   /**
