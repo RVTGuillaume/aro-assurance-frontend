@@ -14,7 +14,7 @@ import axios from 'axios';
  * - Production: URL backend déployée sur Render
  * - Development: localhost:5000
  */
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '');
 
 /**
  * Instance Axios configurée

@@ -567,7 +567,7 @@ export default function Assures() {
                 <div className="flex justify-center mb-8">
                   <div className="relative">
                     <img
-                      src={selectedAssure.photo ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${selectedAssure.photo}` : '/AROO.png'}
+                      src={selectedAssure.photo ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')}${selectedAssure.photo}` : '/AROO.png'}
                       alt={selectedAssure.nom_complet}
                       className="w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
                       onError={(e) => { e.target.src = '/AROO.png'; }}
@@ -1147,7 +1147,7 @@ export default function Assures() {
 
               <div className="flex flex-col items-center gap-4">
                 <img
-                  src={selectedAssure.photo ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${selectedAssure.photo}` : '/AROO.png'}
+                  src={selectedAssure.photo ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')}${selectedAssure.photo}` : '/AROO.png'}
                   alt={selectedAssure.nom_complet}
                   className="w-36 h-36 rounded-full object-cover border-4 border-gray-200"
                   onError={(e) => { e.target.src = '/AROO.png'; }}
@@ -1199,7 +1199,7 @@ export default function Assures() {
               <div className="bg-white rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white w-full max-w-lg">
                 {selectedAssureForFullPhoto.photo ? (
                   <img
-                    src={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${selectedAssureForFullPhoto.photo}`}
+                    src={`${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')}${selectedAssureForFullPhoto.photo}`}
                     alt={selectedAssureForFullPhoto.nom_complet}
                     className="w-full h-auto max-h-[60vh] object-contain"
                     onError={(e) => { e.target.src = '/AROO.png'; }}
@@ -1231,7 +1231,7 @@ function AssureRow({ assure, index, onEdit, onDelete, onPhoto, onDoubleClickPhot
   const [clickCount, setClickCount] = useState(0);
   const clickTimer = useRef(null);
 
-  const photoUrl = assure.photo ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${assure.photo}` : '/AROO.png';
+  const photoUrl = assure.photo ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')}${assure.photo}` : '/AROO.png';
 
   const statutColors = {
     actif: 'bg-emerald-100 text-emerald-700 border-emerald-300',

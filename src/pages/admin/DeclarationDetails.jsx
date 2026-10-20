@@ -123,7 +123,7 @@ const AdminDeclarationDetails = () => {
       }
 
       const baseURL = window.location.origin.includes('localhost') 
-        ? (import.meta.env.VITE_API_URL || 'http://localhost:5000')
+        ? (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')
         : window.location.origin;
       
       let fileUrl = '';
@@ -172,7 +172,7 @@ const AdminDeclarationDetails = () => {
       setDownloadingFiles(prev => ({ ...prev, [fichier.id]: true }));
 
       const baseURL = window.location.origin.includes('localhost') 
-        ? (import.meta.env.VITE_API_URL || 'http://localhost:5000')
+        ? (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')
         : window.location.origin;
       
       const cheminFichier = fichier.chemin_fichier;

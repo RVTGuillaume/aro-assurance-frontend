@@ -120,7 +120,7 @@ export default function Profil() {
   }
 
   const photoUrl = profile?.photo_profil 
-    ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${profile.photo_profil}` 
+    ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api\/?$/, '')}${profile.photo_profil}` 
     : '/AROO.png';
 
   return (
