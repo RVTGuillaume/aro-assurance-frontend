@@ -51,7 +51,7 @@ export default function ProfilePhotoUpload({ currentPhoto, onPhotoUpdate }) {
   };
 
   const photoUrl = currentPhoto 
-    ? `http://localhost:5000${currentPhoto}`
+    ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${currentPhoto}`
     : 'https://ui-avatars.com/api/?name=Admin&size=800&background=047857&color=fff&bold=true';
 
   return (

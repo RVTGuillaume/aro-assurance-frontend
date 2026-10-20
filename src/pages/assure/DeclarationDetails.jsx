@@ -319,7 +319,7 @@ const DeclarationDetails = () => {
 
       // ✅ DÉTERMINER LA BASE URL
       const baseURL = window.location.origin.includes('localhost') 
-        ? 'http://localhost:5000'
+        ? (import.meta.env.VITE_API_URL || 'http://localhost:5000')
         : window.location.origin;
       
       console.log('🌐 Base URL:', baseURL);
